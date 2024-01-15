@@ -12,6 +12,7 @@ general {
 }
 
 order += "volume master"
+order += "battery all"
 order += "tztime local"
 
 volume master {
@@ -20,6 +21,13 @@ volume master {
         device = "default"
         mixer = "Master"
         mixer_idx = 0
+}
+
+battery all {
+  format = "Bat %percentage"
+  last_full_capacity = true
+  low_threshold = 30
+  threshold_type = percentage
 }
 
 tztime local {
