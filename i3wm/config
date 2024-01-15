@@ -180,8 +180,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #202124
-set $inactive-bg-color   #202124
+#for chrome: #202124
+#for firefox: #353535
+
+set $bg-color 	         #353535
+set $inactive-bg-color   #353535
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
@@ -202,16 +205,18 @@ bar {
 }
 
 # extra keybinds
-bindsym $mod+Escape exec i3lock --color "$bg-color"
+bindsym $mod+G exec geany
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+Shift+Tab workspace prev_on_output
+bindsym $mod+Escape exec i3lock --color "$bg-color"
 
-# books
+# extra keybinds for books
 bindsym $mod+C exec open ~/CP/Documents/Books/cph.pdf
 bindsym $mod+I exec open ~/CP/Documents/Books/iusaco.pdf
 bindsym $mod+P exec open ~/CP/Documents/Books/paps.pdf
 
 # screen
+exec_always feh --bg-center ~/Pictures/bg/eva.jpeg
 exec_always xrandr --output LVDS-1 --off --output VGA-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output DP-1 --off
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
