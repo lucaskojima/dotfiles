@@ -1,11 +1,4 @@
-# --- Startup --- 
-
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-
-# --- Basic Definitions --- 
-
+# basic definitions
 set $mod Mod4
 font pango: Deja Vu Sans Mono 9
 
@@ -14,7 +7,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Escape exec i3lock --color "000000"
 
-# --- Windows Stuff --- 
+# startup
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
 
 # change focus
 bindsym $mod+h focus left
@@ -43,6 +39,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+bindsym $mod+q split v; layout stacking
 
 # floating stuff
 floating_modifier $mod
@@ -99,8 +96,6 @@ bindsym $mod+Shift+u resize grow height 10 px or 10 ppt
 bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
-# --- Colors --- 
-
 # window colors
 set $bg-color 	         #303030
 set $inactive-bg-color   #303030
@@ -114,8 +109,6 @@ set $urgent-bg-color     #E53935
 #client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #000000 
 
 hide_edge_borders both
-
-# --- Other --- 
 
 # start py3status
 bar {
