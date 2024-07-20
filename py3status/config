@@ -1,6 +1,6 @@
 general {
-		colors = true
-        interval = 5
+	colors = true
+	interval = 1
 }
 
 order += "whoami"
@@ -8,43 +8,42 @@ order += "volume master"
 order += "tztime local"
 
 tztime local {
-        format = "%H:%M:%S %d-%m-%Y"
+	format = "%d-%m-%Y %H:%M:%S"
 }
 
 volume master {
-        format = "Vol %volume"
-        format_muted = "Muted"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
+	format = "Vol %volume"
+	format_muted = "Muted"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
 }
- 
 
 pomodoro {
-		# pomodoro
-		pomodoros = 100
-		timer_pomodoro = 3600
-		timer_break = 300
-		timer_long_break = 300
+	# pomodoro
+	pomodoros = 100
+	timer_pomodoro = 3600
+	timer_break = 300
+	timer_long_break = 300
 
-		# format
-		format = "{mmss}"
-		
-		format_active = "Stay Focused! [{format}]"
-		format_stopped = "Focus [{format}]"
-		
-		format_break = "Break [{format}]"
-		format_break_stopped = "Break [{format}]"
-		
-		# color
-		color_bad = '#ffffff'
-		
-		# sound
-		sound_pomodoro_start = "~/Music/pomodoro/button-press.wav"
-		sound_pomodoro_end = "~/Music/pomodoro/alarm.wav"
-		sound_break_end = "~/Music/pomodoro/alarm.wav"
+	# format
+	format = "{mmss}"
+	
+	format_active = "Stay Focused! [{format}]"
+	format_stopped = "Focus [{format}]"
+	
+	format_break = "Break [{format}]"
+	format_break_stopped = "Break [{format}]"
+	
+	# color
+	color_bad = '#ffffff'
+	
+	# sound
+	sound_pomodoro_start = "~/Music/pomodoro/button-press.wav"
+	sound_pomodoro_end = "~/Music/pomodoro/alarm.wav"
+	sound_break_end = "~/Music/pomodoro/alarm.wav"
 }
 
 whoami {
-		format = "U: {username}"
+	format = "U: {username}"
 }
