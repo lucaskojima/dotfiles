@@ -8,7 +8,7 @@ y = 3
 [cursor]
 blink_interval = 500
 blink_timeout = 0
-unfocused_hollow = false
+unfocused_hollow = false 
 thickness = 0.6
 
 [cursor.style]
