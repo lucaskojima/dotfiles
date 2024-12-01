@@ -7,6 +7,11 @@ order += "whoami"
 order += "volume master"
 order += "tztime local"
 
+clock {
+	format = "{BR}"
+	format_time = "%d-%m-%Y %H:%M:%S"
+}
+
 tztime local {
 	format = "%d-%m-%Y %H:%M:%S"
 }
